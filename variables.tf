@@ -12,7 +12,7 @@ variable "resource_group" {
 variable "clone_repo" {
   type        = string
   description = "URL of the tekton repo to clone"
-  default     = "https://github.com/open-toolchain/hello-tekton"
+  default     = "https://github.com/nerdingitout/hello-tekton"
 }
 
 variable "repo_name" {
@@ -24,7 +24,7 @@ variable "repo_name" {
 variable "region" {
   type        = string
   description = "IBM Cloud region where your toolchain will be created"
-  default     = "us-south"
+  default     = "eu-de"
 }
 
 variable "toolchain_name" {
