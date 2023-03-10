@@ -21,6 +21,14 @@ variable "repo_name" {
   default     = "simple-tekton"
 }
 
+
+
+variable "evidence_repo_name" {
+  type        = string
+  description = "Name of the new evidence repo that will be created in the toolchain"
+  default     = "evidence-scc"
+}
+
 variable "region" {
   type        = string
   description = "IBM Cloud region where your toolchain will be created"
