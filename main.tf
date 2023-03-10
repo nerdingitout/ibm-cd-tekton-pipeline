@@ -32,6 +32,7 @@ resource "ibm_cd_toolchain_tool_hostedgit" "tekton_repo" {
 
 // Create SCC instance
 resource "ibm_cd_toolchain_tool_securitycompliance" "cd_toolchain_tool_securitycompliance_instance" {
+  toolchain_id = ibm_cd_toolchain.toolchain_instance.id
   parameters {
         name = "compliance"
         evidence_namespace = "cd"
@@ -40,7 +41,6 @@ resource "ibm_cd_toolchain_tool_securitycompliance" "cd_toolchain_tool_securityc
         profile = "IBM Cloud Security Best Practices v1.0.0"
         evidence_repo_url = "var.evidence_repo_name"
   }
-  toolchain_id = ibm_cd_toolchain.cd_toolchain.id
 }
 
 
